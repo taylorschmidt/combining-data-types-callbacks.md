@@ -65,3 +65,86 @@ const powerButton = () => {
 }
 powerButton()
 
+// Model a Vending Machine Model a vending machine
+
+// a vending machine is an object
+// it has an array of snacks (make 3 snacks)
+// snacks are objects that have a name and a price
+// a vending machine has a function vend that allows user to enter the array position (a number) of the snack and then that snack will be returned
+// Be able to call vendingMachine.vend() with a valid integer to return a snack
+
+// const vending = {
+//   snacks: [{
+//     name: 'lays',
+//     price: 1}, {
+//       name: 'kitkat',
+//       price: 1.5}, {
+//         name: 'coke',
+//         price: 0.75
+//       }],
+//   vend: (num) => {
+//       return vending.snacks[num]
+//     }
+// }
+
+// vending.vend(0)
+
+/////////////////////////////////////////////////////
+// Callbacks
+// Make a function add that takes two arguments (numbers) and sums them together
+const add = (num1, num2) => {
+  return num1 + num2
+}
+
+// Make a function subtract that takes two arguments (numbers) and subtracts them
+const subtract = (num1, num2) => {
+  return num1 - num2
+}
+
+// Make a function multiply that takes two arguments and multiplies them
+const multiply = (num1, num2) => {
+  return num1 * num2
+}
+
+// Make a function divide that takes two arguments and divides them
+const divide = (num1, num2) => {
+  return num1 / num2
+}
+
+// Make a function calculate that takes three arguments. Assume the two arguments are a number ie num1, num2 and a function called operates (a callback).
+const calculate = (num1, num2, callback) => {
+  return (callback(num1, num2))
+}
+
+// Make it so that when calculate is invoked, the callback "operates" on the numbers and returns the value.
+// Call calculate 4 times, each time using one of the operation functions you wrote
+
+calculate(1, 2, add)
+calculate(5, 4, subtract)
+calculate(2, 2, multiply)
+calculate(16, 4, divide)
+
+////////////////////////////////////////////
+// Function definition placement
+// Clean up this code, so that it works and has function definitions in the correct place
+
+const bar = () => {
+    console.log('bar here');
+}
+bar();
+
+const foo = () => {
+    console.log('foo here');
+}
+foo();
+
+// Error reading
+// What is meant by the error(s) this produces?
+
+// foo();
+
+// const foo ()=>{
+//     console.log('hi');
+// }
+//answer: foo was already identified as a constant. foo also needs to be invoked after the function is written
+
