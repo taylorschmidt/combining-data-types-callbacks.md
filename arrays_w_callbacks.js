@@ -117,6 +117,51 @@ nums.reduce(function(a, b){
   return a+b
 }, 0)
 // concatenate all the words using reduce
-panagram.reduce(function(a,b){
+panagram.reduce((a,b){
   return a.concat(' ', b)
 });
+
+const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0]
+
+const panagram = ['The', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog']
+
+// Sort
+// Try to sort without any arguments, do you get what you'd expect with the numbers array?
+console.log(nums.sort())
+//no! it moved 0 to the front, as expected, but also moved 10 over to the third position. it must only look at the first value.
+
+// Try to sort without any arguments, do you get what you'd expect with the words array?
+console.log(panagram.sort())
+//no! it most only work on lower-case letters. "The" didnt change positions but "the" did.
+
+// Sort the numbers in ascending order
+nums.sort((a, b) => {
+  return a-b
+})
+
+// Sort the numbers in descending order
+nums.sort((a, b) => {
+  return b-a
+})
+
+// Sort the words in ascending order
+panagram.sort((a, b) => {
+  let string = a.toUpperCase()
+  let stringB = b.toUpperCase()
+  if (string > stringB) {
+    return 1
+  } else {
+    return -1
+  }
+})
+
+// Sort the words in descending order
+panagram.sort((a, b) => {
+  let string = a.toUpperCase()
+  let stringB = b.toUpperCase()
+  if (stringB > string) {
+    return 1
+  } else {
+    return -1
+  }
+})
