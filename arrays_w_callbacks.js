@@ -165,3 +165,151 @@ panagram.sort((a, b) => {
     return -1
   }
 })
+
+
+const panagram = ['The', 'quick','brown','fox', 'jumps', 'over', 'the', 'lazy', 'dog']
+
+// Array Methods Challenge Problems
+// isPanagram
+// Using the following array - test whether each letter a-z (case insensitive) is used at least once
+
+//here is my attempt -- I know this is just testing whether the two arrays have the same letter. not sure how to go about seeing if each letter is used once. I'm guessing the forEach or every array function.
+const alphabet = 'abcdefghijklmnopqrstuvwxyz'
+const alphaArray = alphabet.split('')
+const newPan = panagram.join('')
+const panArray = newPan.split('')
+for (let i = 0; i<panArray.length; i++) {
+  for(let i = 0; i<alphaArray.length; i++) {
+      if (alphaArray[i] === panArray[i])
+      console.log(true)
+  }
+} 
+
+// Working with data
+
+// filter for products with a price that is less than 10, using the array below:
+// sort alphabetically by product name
+const products = [
+      {
+        "name": "allen wrench",
+        "price": 2.99,
+        "description": "handy tool"
+      },
+      {
+        "name": "cornucopia",
+        "price": 5.99,
+        "description": "festive holiday decoration"
+      },
+      {
+        "name": "banana",
+        "price": 0.99,
+        "description": "full of potassium"
+      },
+      {
+        "name": "guillotine (cigar)",
+        "price": 10.59,
+        "description": "behead your stub"
+      },
+      {
+        "name": "jack-o-lantern",
+        "price": 3.99,
+        "description": "spooky seasonal fun"
+      },
+      {
+        "name": "doggie treat (box)",
+        "price": 5.99,
+        "description": "fido loves 'em"
+      },
+      {
+        "name": "egg separator",
+        "price": 3.99,
+        "description": "it separates yolks from whites"
+      },
+      {
+        "name": "LED lightbulb",
+        "price": 6.55,
+        "description": "It's super-efficient!"
+      },
+      {
+        "name": "owl pellets",
+        "price": 3.99,
+        "description": "Don't ask what they used to be."
+      },
+      {
+        "name": "flag",
+        "price": 5.99,
+        "description": "catches the breeze"
+      },
+      {
+        "name": "hair brush",
+        "price": 6.99,
+        "description": "fine boar bristles"
+      },
+      {
+        "name": "iridium (one gram)",
+        "price": 19.36,
+        "description": "corrosion-resistant metal"
+      },
+      {
+        "name": "quark",
+        "price": 0.01,
+        "description": "Very small"
+      },
+      {
+        "name": "turtleneck",
+        "price": 19.99,
+        "description": "available in black and slightly-darker black"
+      },
+      {
+        "name": "kaleidoscope",
+        "price": 8.25,
+        "description": "tube with moving plastic pieces inside"
+      },
+      {
+        "name": "mitt (leather)",
+        "price": 15,
+        "description": "regulation sized"
+      },
+      {
+        "name": "nothing",
+        "price": 10,
+        "description": "Hey, if you pay us, we won't ask any questions."
+      },
+      {
+        "name": "violin",
+        "price": 2000,
+        "description": "Talk about a JS fiddle..."
+      },
+      {
+        "name": "yoyo",
+        "price": 1,
+        "description": "We had to pull some strings to get this one in."
+      },
+      {
+        "name": "pincushion",
+        "price": 1.99,
+        "description": "You'll get 'stuck' on it"
+      },
+    ]
+
+    const smallPrice = products.filter(element => {
+      if(element.price < 10) {
+        return true
+      }
+    })
+
+console.log(smallPrice)
+
+
+//my attempt at sorting by product name
+const alpha = products.sort((a, b) => {
+  let aUpper = a.name.toUpperCase()
+  let bUpper = b.name.toUpperCase()
+  if (aUpper > bUpper) {
+    return 1
+  } else {
+    return -1
+  }
+})
+ 
+console.log(alpha)
